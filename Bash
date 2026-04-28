@@ -1,5 +1,5 @@
-unzip cyber-sentinels-worldid-nextjs-v2.zip
-cd cyber-sentinels-worldid-nextjs
 npm install
-cp .env.example .env.local
-npm run dev
+npm run build
+git add .
+git commit -m "Fix Vercel build with clean Next.js app"
+git push origin main
