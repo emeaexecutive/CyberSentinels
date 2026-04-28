@@ -1,0 +1,3 @@
+git add .
+git commit -m "Add World ID proof-of-human integration"
+git push origin main
