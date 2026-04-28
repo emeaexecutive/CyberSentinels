@@ -1,0 +1,5 @@
+unzip cyber-sentinels-worldid-nextjs-v2.zip
+cd cyber-sentinels-worldid-nextjs
+npm install
+cp .env.example .env.local
+npm run dev
