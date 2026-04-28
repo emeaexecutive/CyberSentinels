@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CYBER SENTINELS — Trust Infrastructure for the Synthetic Age</title>
+  <meta name="description" content="CYBER SENTINELS is trust infrastructure for humans, AI agents, and digital systems. Verify humans, authenticate agents, and protect trust in the synthetic age." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sentinelBlack: '#04060A',
+            sentinelPanel: '#0B1018',
+            sentinelLine: 'rgba(255,255,255,0.10)',
+            sentinelText: '#E7EDF7',
+            sentinelMuted: '#8C98AA',
+            sentinelGreen: '#19C37D',
+            sentinelCyan: '#45C7FF'
+          },
+          boxShadow: {
+            softGlow: '0 0 60px rgba(25,195,125,0.16)',
+            cyanGlow: '0 0 60px rgba(69,199,255,0.12)'
+          },
+          backgroundImage: {
+            heroGlow: 'radial-gradient(circle at top left, rgba(69,199,255,0.18), transparent 30%), radial-gradient(circle at top right, rgba(25,195,125,0.18), transparent 26%), linear-gradient(180deg, #04060A 0%, #071018 52%, #04060A 100%)',
+            grid: 'linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px)'
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #04060A; color: #E7EDF7; }
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.025));
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(18px);
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .75s ease, transform .75s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .scanline {
+      position: relative;
+      overflow: hidden;
+    }
+    .scanline::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      top: 0;
+      background: linear-gradient(90deg, transparent, rgba(69,199,255,.75), transparent);
+      animation: scan 4.5s linear infinite;
+      opacity: .55;
+    }
+    @keyframes scan {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(560px); }
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <div class="fixed inset-0 -z-20 bg-heroGlow"></div>
+  <div class="fixed inset-0 -z-10 bg-grid bg-[size:34px_34px] opacity-20"></div>
+
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/35 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+      <a href="#" class="flex items-center gap-3">
+        <div class="flex h-11 w-11 items-center justify-center rounded-2xl border border-emerald-400/25 bg-white/5 shadow-softGlow">
+          <span class="text-sm font-bold tracking-[0.28em] text-sentinelGreen">CS</span>
+        </div>
+        <div>
+          <div class="text-xs uppercase tracking-[0.35em] text-sentinelMuted">Cyber Sentinels</div>
+          <div class="text-sm text-white/90">Trust Infrastructure</div>
+        </div>
+      </a>
+      <nav class="hidden items-center gap-8 text-sm text-sentinelMuted md:flex">
+        <a href="#platform" class="hover:text-white">Platform</a>
+        <a href="#product" class="hover:text-white">Product</a>
+        <a href="#usecases" class="hover:text-white">Use Cases</a>
+        <a href="#investors" class="hover:text-white">Investors</a>
+      </nav>
+      <a href="#access" class="rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-emerald-400/50 hover:bg-emerald-400/10">Request Access</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1.1fr_.9fr] lg:px-10 lg:py-28">
+        <div class="fade-up">
+          <div class="mb-6 inline-flex rounded-full border border-emerald-400/25 bg-emerald-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-sentinelGreen">
+            Trust must be proven
+          </div>
+          <h1 class="max-w-5xl text-5xl font-semibold leading-tight tracking-tight text-white md:text-7xl">
+            The trust layer for a world of
+            <span class="bg-gradient-to-r from-white via-sentinelCyan to-sentinelGreen bg-clip-text text-transparent">deepfakes, autonomous agents and synthetic identities.</span>
+          </h1>
+          <p class="mt-8 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
+            CYBER SENTINELS verifies humans, authenticates AI agents, scores trust, and creates auditable proof before permission is granted.
+          </p>
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="#access" class="rounded-full bg-white px-7 py-3.5 text-sm font-bold text-black transition hover:scale-[1.02]">Request Early Access</a>
+            <a href="#product" class="rounded-full border border-white/10 bg-white/5 px-7 py-3.5 text-sm font-bold text-white transition hover:border-cyan-300/50 hover:bg-white/10">See Product</a>
+          </div>
+          <div class="mt-12 grid gap-4 md:grid-cols-3">
+            <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+              <div class="text-lg font-semibold text-white">Verified Human™</div>
+              <p class="mt-2 text-sm leading-6 text-sentinelMuted">Proof-of-human and anti-deepfake verification for remote trust.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+              <div class="text-lg font-semibold text-white">Agent Passport™</div>
+              <p class="mt-2 text-sm leading-6 text-sentinelMuted">Identity, permissions, provenance and auditability for AI agents.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+              <div class="text-lg font-semibold text-white">Trust Graph™</div>
+              <p class="mt-2 text-sm leading-6 text-sentinelMuted">Relationship intelligence across people, agents, sessions and risk.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="fade-up lg:pl-4">
+          <div class="glass scanline rounded-[32px] p-6 shadow-cyanGlow">
+            <div class="flex items-center justify-between border-b border-white/10 pb-5">
+              <div>
+                <div class="text-xs uppercase tracking-[0.3em] text-sentinelMuted">Sentinel Console</div>
+                <div class="mt-2 text-2xl font-semibold text-white">Trust Command Center</div>
+              </div>
+              <div class="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-sentinelGreen">Live</div>
+            </div>
+            <div class="mt-6 grid gap-4">
+              <div class="rounded-3xl border border-emerald-400/20 bg-emerald-400/10 p-5">
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <div class="text-xs uppercase tracking-[0.25em] text-emerald-200/70">Verification</div>
+                    <div class="mt-2 text-xl font-semibold text-white">Verified Human Approved</div>
+                    <p class="mt-2 text-sm leading-6 text-slate-300">Liveness, proof-of-human, device and session signals passed enterprise policy.</p>
+                  </div>
+                  <div class="rounded-full bg-emerald-400/15 px-3 py-1 text-xs font-semibold text-sentinelGreen">Trust 94</div>
+                </div>
+              </div>
+              <div class="rounded-3xl border border-cyan-400/20 bg-cyan-400/10 p-5">
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <div class="text-xs uppercase tracking-[0.25em] text-cyan-200/70">Agent Passport</div>
+                    <div class="mt-2 text-xl font-semibold text-white">Finance Agent Controlled</div>
+                    <p class="mt-2 text-sm leading-6 text-slate-300">Origin verified. Permissions restricted. Audit trail active.</p>
+                  </div>
+                  <div class="rounded-full bg-cyan-400/15 px-3 py-1 text-xs font-semibold text-sentinelCyan">Active</div>
+                </div>
+              </div>
+              <div class="rounded-3xl border border-red-400/20 bg-red-500/10 p-5">
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <div class="text-xs uppercase tracking-[0.25em] text-red-200/70">Threat Alert</div>
+                    <div class="mt-2 text-xl font-semibold text-white">Voice Clone Risk Blocked</div>
+                    <p class="mt-2 text-sm leading-6 text-slate-300">Executive approval challenged before transaction execution.</p>
+                  </div>
+                  <div class="rounded-full bg-red-500/15 px-3 py-1 text-xs font-semibold text-red-300">Blocked</div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 grid gap-4 md:grid-cols-2">
+              <div class="rounded-2xl border border-white/10 bg-black/25 p-4">
+                <div class="text-xs uppercase tracking-[0.25em] text-sentinelMuted">Mode</div>
+                <div class="mt-2 text-white">Human · Agent · Session</div>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-black/25 p-4">
+                <div class="text-xs uppercase tracking-[0.25em] text-sentinelMuted">Audit</div>
+                <div class="mt-2 text-white">Encrypted · Traceable</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-white/10 bg-black/25">
+      <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+        <div class="fade-up max-w-3xl">
+          <div class="text-sm uppercase tracking-[0.3em] text-sentinelGreen">The problem</div>
+          <h2 class="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">We no longer know who — or what — is on the other side.</h2>
+          <p class="mt-6 text-lg leading-8 text-slate-300">
+            Deepfake interviews, cloned voices, synthetic executives, AI agents and remote work have broken the old model of identity. The attacker no longer needs to break in. They simply need to be believed.
+          </p>
+        </div>
+        <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div class="glass rounded-3xl p-6 fade-up"><h3 class="text-xl font-semibold text-white">Hiring Fraud</h3><p class="mt-3 text-sm leading-6 text-sentinelMuted">Synthetic candidates and proxy interviews entering enterprise pipelines.</p></div>
+          <div class="glass rounded-3xl p-6 fade-up"><h3 class="text-xl font-semibold text-white">Executive Impersonation</h3><p class="mt-3 text-sm leading-6 text-sentinelMuted">Voice and video clones attacking approval workflows and authority chains.</p></div>
+          <div class="glass rounded-3xl p-6 fade-up"><h3 class="text-xl font-semibold text-white">AI Agent Risk</h3><p class="mt-3 text-sm leading-6 text-sentinelMuted">Autonomous systems acting without identity, permissions or accountability.</p></div>
+          <div class="glass rounded-3xl p-6 fade-up"><h3 class="text-xl font-semibold text-white">Weak Trust Signals</h3><p class="mt-3 text-sm leading-6 text-sentinelMuted">Passwords and one-time checks are not enough for synthetic reality.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="platform">
+      <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+        <div class="fade-up max-w-3xl">
+          <div class="text-sm uppercase tracking-[0.3em] text-sentinelCyan">Platform</div>
+          <h2 class="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">Identity intelligence meets cyber governance.</h2>
+          <p class="mt-6 text-lg leading-8 text-slate-300">CYBER SENTINELS operates as trust infrastructure across verified humans, AI agents, high-risk sessions and audit-ready decisions.</p>
+        </div>
+        <div class="mt-14 grid gap-6 lg:grid-cols-2">
+          <div class="glass rounded-[28px] p-8 fade-up"><div class="text-xs uppercase tracking-[0.3em] text-sentinelGreen">01</div><h3 class="mt-4 text-2xl font-semibold text-white">Sentinel Identity™</h3><p class="mt-4 leading-7 text-slate-300">Proof-of-human, liveness, device intelligence, behaviour and anti-spoofing for high-trust verification.</p></div>
+          <div class="glass rounded-[28px] p-8 fade-up"><div class="text-xs uppercase tracking-[0.3em] text-sentinelCyan">02</div><h3 class="mt-4 text-2xl font-semibold text-white">Agent Passport™</h3><p class="mt-4 leading-7 text-slate-300">Verified origin, permissions, activity history and accountability for autonomous AI agents.</p></div>
+          <div class="glass rounded-[28px] p-8 fade-up"><div class="text-xs uppercase tracking-[0.3em] text-sentinelGreen">03</div><h3 class="mt-4 text-2xl font-semibold text-white">Sentinel Score™</h3><p class="mt-4 leading-7 text-slate-300">Dynamic trust scoring based on identity signals, risk patterns, policy rules and anomalies.</p></div>
+          <div class="glass rounded-[28px] p-8 fade-up"><div class="text-xs uppercase tracking-[0.3em] text-sentinelCyan">04</div><h3 class="mt-4 text-2xl font-semibold text-white">Trust Graph™</h3><p class="mt-4 leading-7 text-slate-300">Relationship intelligence across humans, agents, sessions, organisations, approvals and threat events.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="product" class="border-y border-white/10 bg-white/[0.025]">
+      <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+        <div class="grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-start">
+          <div class="fade-up">
+            <div class="text-sm uppercase tracking-[0.3em] text-sentinelGreen">Product</div>
+            <h2 class="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">Verify before permission.</h2>
+            <p class="mt-6 text-lg leading-8 text-slate-300">The product flow is simple: prove identity, score trust, map relationships, create an audit record, and decide whether access should be approved, challenged or blocked.</p>
+          </div>
+          <div class="grid gap-4 md:grid-cols-2">
+            <div class="rounded-3xl border border-white/10 bg-black/25 p-6 fade-up"><h3 class="text-lg font-semibold text-white">Verification Flow</h3><p class="mt-3 text-sm leading-6 text-sentinelMuted">Human verification with proof-of-human, liveness, session intelligence and audit evidence.</p></div>
+            <div class="rounded-3xl border border-white/10 bg-black/25 p-6 fade-up"><h3 class="text-lg font-semibold text-white">Trust Dashboard</h3><p class="mt-3 text-sm leading-6 text-sentinelMuted">Command-center view for identities, alerts, trust scores and investigation workflows.</p></div>
+            <div class="rounded-3xl border border-white/10 bg-black/25 p-6 fade-up"><h3 class="text-lg font-semibold text-white">Trust Graph Explorer</h3><p class="mt-3 text-sm leading-6 text-sentinelMuted">Explainable relationship intelligence across people, agents and risk events.</p></div>
+            <div class="rounded-3xl border border-white/10 bg-black/25 p-6 fade-up"><h3 class="text-lg font-semibold text-white">Agent Passport Detail</h3><p class="mt-3 text-sm leading-6 text-sentinelMuted">Govern the agent before it governs outcomes.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="usecases">
+      <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+        <div class="fade-up max-w-3xl">
+          <div class="text-sm uppercase tracking-[0.3em] text-sentinelCyan">Use cases</div>
+          <h2 class="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">Built for high-trust environments.</h2>
+        </div>
+        <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div class="glass rounded-3xl p-6 fade-up"><h3 class="text-xl font-semibold">Enterprise Hiring</h3><p class="mt-3 text-sm leading-6 text-sentinelMuted">Stop deepfake candidate fraud before hiring pipelines and systems are exposed.</p></div>
+          <div class="glass rounded-3xl p-6 fade-up"><h3 class="text-xl font-semibold">Executive Protection</h3><p class="mt-3 text-sm leading-6 text-sentinelMuted">Challenge cloned voice and synthetic authority in financial approval chains.</p></div>
+          <div class="glass rounded-3xl p-6 fade-up"><h3 class="text-xl font-semibold">AI Governance</h3><p class="mt-3 text-sm leading-6 text-sentinelMuted">Give agents passports, permission boundaries and continuous accountability.</p></div>
+          <div class="glass rounded-3xl p-6 fade-up"><h3 class="text-xl font-semibold">Vendor Access</h3><p class="mt-3 text-sm leading-6 text-sentinelMuted">Verify contractors, consultants and external parties before privileged access.</p></div>
+          <div class="glass rounded-3xl p-6 fade-up"><h3 class="text-xl font-semibold">Finance Controls</h3><p class="mt-3 text-sm leading-6 text-sentinelMuted">Protect sensitive transaction workflows with proof before permission.</p></div>
+          <div class="glass rounded-3xl p-6 fade-up"><h3 class="text-xl font-semibold">Regulated Industries</h3><p class="mt-3 text-sm leading-6 text-sentinelMuted">Create compliance-ready trust records for identity-sensitive operations.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="investors" class="border-y border-white/10 bg-black/25">
+      <div class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div class="fade-up">
+            <div class="text-sm uppercase tracking-[0.3em] text-sentinelGreen">Investor thesis</div>
+            <h2 class="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">Every AI agent will need a passport.</h2>
+            <p class="mt-6 text-lg leading-8 text-slate-300">AI agents will approve, negotiate, route, decide and act. Enterprises will need proof of origin, permission boundaries, trust scores and auditability before autonomous execution is allowed.</p>
+          </div>
+          <div class="glass rounded-[32px] p-8 fade-up">
+            <div class="text-xs uppercase tracking-[0.3em] text-sentinelMuted">Category</div>
+            <div class="mt-4 text-4xl font-semibold text-white">Trust Infrastructure</div>
+            <p class="mt-5 leading-7 text-slate-300">We are building identity infrastructure for a world where humans are no longer distinguishable from machines.</p>
+            <div class="mt-6 rounded-3xl border border-emerald-400/20 bg-emerald-400/10 p-5 text-sentinelGreen">Trust is not a score. Trust is a graph.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="access" class="pb-20 pt-20">
+      <div class="mx-auto max-w-5xl px-6 lg:px-10">
+        <div class="glass relative overflow-hidden rounded-[36px] p-10 shadow-softGlow fade-up">
+          <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(69,199,255,0.18),transparent_30%)]"></div>
+          <div class="max-w-3xl">
+            <div class="text-sm uppercase tracking-[0.3em] text-sentinelGreen">Early access</div>
+            <h2 class="mt-4 text-4xl font-semibold tracking-tight text-white md:text-5xl">Join the trust infrastructure layer for the AI economy.</h2>
+            <p class="mt-6 text-lg leading-8 text-slate-300">For enterprise pilots, design partners, strategic investors and cyber ecosystem partnerships.</p>
+            <form class="mt-8 grid gap-4 md:grid-cols-[1fr_auto]" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <input name="email" type="email" placeholder="Work email" required class="w-full rounded-full border border-white/10 bg-black/30 px-6 py-4 text-white placeholder:text-sentinelMuted focus:border-emerald-400/50 focus:outline-none" />
+              <button type="submit" class="rounded-full bg-white px-7 py-4 text-sm font-bold text-black transition hover:scale-[1.02]">Request Access</button>
+            </form>
+            <p class="mt-4 text-sm text-sentinelMuted">Replace the Formspree action with your Airtable, Formspree or backend endpoint when ready.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-black/30">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-sentinelMuted lg:flex-row lg:items-center lg:justify-between lg:px-10">
+      <div>© CYBER SENTINELS™ — Trust Infrastructure for Humans, AI Agents and Digital Systems.</div>
+      <div class="flex gap-6">
+        <a href="#platform" class="hover:text-white">Platform</a>
+        <a href="#product" class="hover:text-white">Product</a>
+        <a href="#access" class="hover:text-white">Access</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
